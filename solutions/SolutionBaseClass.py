@@ -1,9 +1,11 @@
 import cProfile
 import pstats
+import time
 
 def profileit(func):
     def wrapper(*args, **kwargs):
         # only show filename and line number
+        # increase profile 
         prof = cProfile.Profile()
         prof.runcall(func, *args, **kwargs)
         p = pstats.Stats(prof)
