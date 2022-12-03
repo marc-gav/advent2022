@@ -1,10 +1,8 @@
-from solutions.Day1_solution import Day1
+from solutions.Day2_solution import Solution
 
-day1 = Day1()
+day = Solution()
 
-print(day1.part1())
-print(day1.part2())
-
-day1.profile_part1()
-
-day1.profile_part2()
+print(day.part1())
+print(day.part2())
+day.profile_part1()
+day.profile_part2()
