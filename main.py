@@ -1,8 +1,7 @@
-from solutions.Day2_solution import Solution
+from solutions.Day5_solution import Solution
 
 day = Solution()
 
-print(day.part1())
-print(day.part2())
-day.profile_part1()
-day.profile_part2()
+print(f"Part 1: {day.part1(day.problem_string)}")
+print(f"Part 2: {day.part2(day.problem_string)}")
+#day.solution_time_complexity()
