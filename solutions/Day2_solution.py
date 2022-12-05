@@ -29,10 +29,13 @@ class Solution(AdventSolution):
             "C": "A",  # scissors is defeated by rock
         }
 
-    def part1(self) -> int:
-        game = [round.split() for round in self.problem_string.split("\n")]
-        self.cache["game"] = game
+    def reader_parser(self, input_string):
+        return [round.split() for round in input_string.split("\n")]
+
+
+    def part1(self, input_string) -> int:
         # let's assume that the letter with the highest count is the winner
+        game = self.reader_parser(input_string)
         return sum(
             [
                 self.determine_outcome_part1(round[0], self.desencrpytion_part1[round[1]])
@@ -40,8 +43,8 @@ class Solution(AdventSolution):
             ]
         )
 
-    def part2(self) -> int:
-        game = self.cache["game"]
+    def part2(self, input_string) -> int:
+        game = self.reader_parser(input_string)
         return sum(
             [
                 self.determine_outcome_part2(round[0], self.desencrpytion_part2[round[1]])
@@ -70,4 +73,11 @@ class Solution(AdventSolution):
 
         move_score = self.score_system[move]
         return move_score + result
+
+    def original_length(self):
+        return len(self.problem_string.split("\n"))
+
+    def create_input(self, length):
+        unit = self.problem_string.split("\n")[0]
+        return "\n".join([unit] * length)
 
