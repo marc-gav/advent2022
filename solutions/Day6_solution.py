@@ -16,7 +16,7 @@ class Solution(AdventSolution):
 
     def part1(self, problem_string) -> int:
         for i in range(len(problem_string) - 3):
-            if len(set(problem_string[i:i+14])) == 4:
+            if len(set(problem_string[i:i+4])) == 4:
                 return i + 4
         
         raise Exception("No window of 4 characters found")
