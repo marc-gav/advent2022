@@ -1,4 +1,4 @@
-from solutions.Day5_solution import Solution
+from solutions.Day6_solution import Solution
 
 day = Solution()
 

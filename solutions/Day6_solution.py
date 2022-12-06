@@ -26,7 +26,7 @@ class Solution(AdventSolution):
             if len(set(problem_string[i:i+14])) == 14:
                 return i + 14
         
-        raise Exception("No window of 4 characters found")
+        raise Exception("No window of 14 characters found")
 
     def original_length(self):
         return len(self.problem_string)
